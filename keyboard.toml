@@ -1,17 +1,14 @@
-# Documentation: https://haobogu.github.io/rmk/keyboard_configuration.html
 [keyboard]
 name = "RMK Keyboard"
 product_name = "RMK Keyboard"
 vendor_id = 0x4c4b
 product_id = 0x4643
 manufacturer = "haobo"
-chip = "esp32s3"
+chip = "esp32c3"
+usb_enable = false
 
-[matrix]
-# Input and output pins are mandatory
-row_pins = ["PIN_6", "PIN_7", "PIN_8", "PIN_9"]
-col_pins = ["PIN_19", "PIN_20", "PIN_21"]
-# WARNING: Currently row2col/col2row is set in RMK's feature gate, configs here do nothing actually
+
+# RMK uses col2row as the default matrix diode direction, if you want to use a row2col matrix, add `row2col = true`
 # row2col = true
 
 [layout]
@@ -33,18 +30,42 @@ keymap = [
     ],
 ]
 
-[light]
-# All light pins are high-active by default, uncomment if you want it to be low-active
-# capslock.pin = "PB2"
-# capslock.low_active = true
-# scrolllock.pin = "PA3"
-# scrolllock.low_active = true
-# Just ignore if no light pin is used for it
-# numslock.pin = "PA5"
-# numslock.low_active = true
-
-
-
-[storage]
 # Storage feature is enabled by default
-# enabled = false
+[storage]
+enabled = true
+
+[ble]
+enabled = true
+
+
+[split]
+connection = "ble"
+
+[split.central]
+rows = 2
+cols = 2
+row_offset = 0
+col_offset = 0
+ble_addr = [0x18, 0xe2, 0x21, 0x80, 0xc0, 0xc7]
+
+[split.central.matrix]
+matrix_type = "normal"
+# RMK uses col2row as the default matrix diode direction, if you want to use a row2col matrix, add `row2col = true`
+# row2col = true
+row_pins = ["GPIO6", "GPIO7"]
+col_pins = ["GPIO3", "GPIO4"]
+
+[[split.peripheral]]
+rows = 2
+cols = 1
+row_offset = 2
+col_offset = 2
+ble_addr = [0x7e, 0xfe, 0x73, 0x9e, 0x66, 0xe3]
+[split.peripheral.matrix]
+matrix_type = "normal"
+row_pins = ["GPIO6", "GPIO7"]
+col_pins = ["GPIO3"]
+
+[dependency]
+# Whether to enable defmt, set to false for reducing binary size
+defmt_log = false
