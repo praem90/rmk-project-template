@@ -5,7 +5,7 @@ vendor_id = 0x4c4b
 product_id = 0x4643
 manufacturer = "haobo"
 chip = "esp32s3"
-usb_enable = false
+usb_enable = true
 
 
 # RMK uses col2row as the default matrix diode direction, if you want to use a row2col matrix, add `row2col = true`
