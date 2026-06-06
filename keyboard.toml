@@ -79,7 +79,7 @@ row_offset = 0
 col_offset = 6
 
 [split.peripheral.matrix]
-row_pins = ["GPIO8", "GPIO9", "GPIO10", "GPIO11"]
+row_pins = ["GPIO11", "GPIO10", "GPIO9", "GPIO8"]
 col_pins = ["GPIO6", "GPIO5", "GPIO4", "GPIO3", "GPIO2", "GPIO7"]
 row2col = true
 
