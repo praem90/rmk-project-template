@@ -70,7 +70,7 @@ col_offset = 0
 row_pins = ["GPIO8", "GPIO9", "GPIO10", "GPIO11"]
 col_pins = ["GPIO6", "GPIO5", "GPIO4", "GPIO3", "GPIO2", "GPIO7"]
 # RMK uses col2row as the default matrix diode direction, if you want to use a row2col matrix, add `row2col = true`
-# row2col = true
+row2col = true
 
 [[split.peripheral]]
 rows = 4
@@ -81,6 +81,7 @@ col_offset = 6
 [split.peripheral.matrix]
 row_pins = ["GPIO8", "GPIO9", "GPIO10", "GPIO11"]
 col_pins = ["GPIO6", "GPIO5", "GPIO4", "GPIO3", "GPIO2", "GPIO7"]
+row2col = true
 
 [ble]
 enabled = true
