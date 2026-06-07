@@ -17,7 +17,7 @@ keymap = [
         ["Esc", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "Backspace"],
         ["LShift", "A", "LT(3, S)", "LT(2, D)", "LT(1, F)", "G", "H", "J", "K", "L", ";", "RShift"],
         ["Tab", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "/", "SWITCH"],
-        ["", "-", "-", "LCtrl", "LGui", "LT(2, Space)", "Enter", "MO(1)", "RAlt", "-", "-", "-"],
+        ["-", "-", "-", "LCtrl", "LGui", "LT(2, Space)", "Enter", "MO(1)", "RAlt", "-", "-", "-"],
     ],
     [
         ["-",      "1", "2", "3", "4", "5", "6",    "7", "8", "9", "0", "Delete"],
