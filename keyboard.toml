@@ -88,3 +88,4 @@ enabled = true
 
 [rmk]
 split_peripherals_num = 1
+split_central_sleep_timeout_seconds = 60
