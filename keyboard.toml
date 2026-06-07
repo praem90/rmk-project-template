@@ -5,7 +5,7 @@ vendor_id = 0x4c4b
 product_id = 0x4643
 manufacturer = "RMK"
 chip = "esp32s3"
-usb_enable = false
+usb_enable = true
 
 
 [layout]
