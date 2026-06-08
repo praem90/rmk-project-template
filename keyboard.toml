@@ -85,6 +85,10 @@ row2col = true
 
 [ble]
 enabled = true
+battery_adc_pin = "GPIO1"
+adc_divider_measured = 220000
+# Total resistance of the full path for input adc
+adc_divider_total = 440000
 
 [rmk]
 split_peripherals_num = 1
