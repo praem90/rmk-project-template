@@ -20,7 +20,7 @@ keymap = [
         ["-", "-", "-", "LCtrl", "LGui", "LT(2, Space)", "Enter", "MO(1)", "RAlt", "-", "-", "-"],
     ],
     [
-        ["-",      "1", "2", "3", "4", "5", "6",    "7", "8", "9", "0", "Delete"],
+        ["User8",      "1", "2", "3", "4", "5", "6",    "7", "8", "9", "0", "Delete"],
         ["LShift", "-", "-", "-", "-", "-", "Left", "Down", "Up", "Right", "-", "RShift"],
         ["-",      "-", "-", "-", "-", "-", "-",    "PageDown", "PageUp", "-", "-", "-"],
         ["-",      "-", "-", "LAlt", "-", "-", "RAlt",    "-", "-", "-", "-", "-"],
@@ -85,12 +85,7 @@ row2col = true
 
 [ble]
 enabled = true
-battery_adc_pin = "GPIO1"
-adc_divider_measured = 220000
-# Total resistance of the full path for input adc
-adc_divider_total = 440000
 
 [rmk]
 split_peripherals_num = 1
-split_central_sleep_timeout_seconds = 60
 
