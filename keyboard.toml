@@ -58,7 +58,7 @@ keymap = [
 ]
 
 [split]
-connection = "ble"
+connection = "serial"
 
 [split.central]
 rows = 4
@@ -69,6 +69,10 @@ col_offset = 0
 [split.central.matrix]
 row_pins = ["GPIO8", "GPIO9", "GPIO10", "GPIO11"]
 col_pins = ["GPIO6", "GPIO5", "GPIO4", "GPIO3", "GPIO2", "GPIO7"]
+serial = [
+    # Half-duplex serial port using Programmable IO block PIO0
+    { instance = "UART0", tx_pin = "PIN_43", rx_pin = "PIN_44" },
+]
 # RMK uses col2row as the default matrix diode direction, if you want to use a row2col matrix, add `row2col = true`
 row2col = true
 
@@ -77,14 +81,16 @@ rows = 4
 cols = 6
 row_offset = 0
 col_offset = 6
+serial = [
+    # Half-duplex serial port using Programmable IO block PIO0
+    { instance = "UART0", tx_pin = "PIN_43", rx_pin = "PIN_44" },
+]
 
 [split.peripheral.matrix]
 row_pins = ["GPIO11", "GPIO10", "GPIO9", "GPIO8"]
 col_pins = ["GPIO7", "GPIO2", "GPIO3", "GPIO4", "GPIO5", "GPIO6"]
 row2col = true
 
-[ble]
-enabled = true
 
 [rmk]
 split_peripherals_num = 1
